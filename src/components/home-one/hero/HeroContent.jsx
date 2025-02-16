@@ -12,10 +12,10 @@ function HeroContent() {
 				<FadeInStaggerTwoChildren>
 					<h1>
 						<span className="aximo-title-animation">
-						AI for a
-							{/* <img src={StarImg} alt="StarImg" /> */}
-						</span>{" "}
-						Better Future
+							AI for Better
+							<img src={StarImg} alt="StarImg" />
+						</span>
+						Future
 					</h1>
 				</FadeInStaggerTwoChildren>
 				<FadeInStaggerTwoChildren>
