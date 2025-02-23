@@ -2136,6 +2136,9 @@ header.aximo-header-section.aximo-header7.sticky-menu {
 	border-top: 1px solid rgba(11, 16, 64, 0.1);
 }
 
+.aximo-footer-logo{
+	font-family: vonique;
+}
 @media (max-width: 991px) {
 	.aximo-footer-logo {
 		text-align: center;
@@ -8002,6 +8005,7 @@ img.swipeimage {
 	padding: 25px 0;
 	text-align: center;
 	background-color: var(--dark-bg);
+	font-family: vonique;
 }
 
 .aximo-account-title {
