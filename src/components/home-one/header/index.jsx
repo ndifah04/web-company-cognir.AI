@@ -15,8 +15,8 @@ function Header() {
 				<nav className="navbar site-navbar">
 					<HeaderLogo />
 					<div className="menu-block-wrapper">
-						{/* <DesktopNav>
-							<NavItem dropdown title="Demo">
+						<DesktopNav>
+							<NavItem dropdown title="Platform">
 								<Dropdown>
 									<DropdownItem url="/">Design Agency</DropdownItem>
 									<DropdownItem url="home-two">Startup Agency</DropdownItem>
@@ -27,8 +27,8 @@ function Header() {
 									<DropdownItem url="home-seven">Advertising agency</DropdownItem>
 								</Dropdown>
 							</NavItem>
-							<NavItem url="about-us">About Us</NavItem>
-							<NavItem dropdown title="Pages">
+
+							<NavItem dropdown title="Solution">
 								<Dropdown>
 									<DropdownItem url="about-us">About Us</DropdownItem>
 									<DropdownItem url="pricing">Pricing</DropdownItem>
@@ -75,15 +75,16 @@ function Header() {
 									</DropdownItem>
 								</Dropdown>
 							</NavItem>
-							<NavItem dropdown title="Blog">
+							<NavItem url="about-us">Customers</NavItem>
+							<NavItem dropdown title="Resources">
 								<Dropdown>
 									<DropdownItem url="blog">Our Blog</DropdownItem>
 									<DropdownItem url="blog-grid">Blog Grid</DropdownItem>
 									<DropdownItem url="single-blog">Blog Details</DropdownItem>
 								</Dropdown>
 							</NavItem>
-							<NavItem url="contact-us">Contact Us</NavItem>
-						</DesktopNav> */}
+							{/* <NavItem url="contact-us">Contact Us</NavItem> */}
+						</DesktopNav>
 					</div>
 					<HeaderButton />
 
