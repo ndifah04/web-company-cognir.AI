@@ -1,6 +1,7 @@
 import FadeInRight from "../../animation/FadeInRight";
 import HeroContent from "./HeroContent";
 import HeroThumbs from "./HeroThumbs";
+import GLBViewer from "../../gltf-viewer";
 
 function HeroSection() {
 	return (
@@ -12,7 +13,8 @@ function HeroSection() {
 					</div>
 					<div className="col-lg-4">
 						<FadeInRight>
-							<HeroThumbs />
+							{/* <HeroThumbs /> */}
+							{/* <GLBViewer /> */}
 						</FadeInRight>
 					</div>
 				</div>
