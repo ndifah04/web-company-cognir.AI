@@ -1,21 +1,16 @@
-import FadeInRight from "../../animation/FadeInRight";
 import HeroContent from "./HeroContent";
-import HeroThumbs from "./HeroThumbs";
 import GLBViewer from "../../gltf-viewer";
-
 function HeroSection() {
 	return (
-		<div className="aximo-hero-section dark-bg">
-			<div className="container position-relative">
+		<div className="aximo-hero-section dark-bg position-relative">
+			<GLBViewer />
+			<div className="aximo-hero-tagline-hero">
 				<div className="row">
 					<div className="col-lg-8">
 						<HeroContent />
 					</div>
 					<div className="col-lg-4">
-						<FadeInRight>
-							{/* <HeroThumbs /> */}
-							{/* <GLBViewer /> */}
-						</FadeInRight>
+
 					</div>
 				</div>
 			</div>

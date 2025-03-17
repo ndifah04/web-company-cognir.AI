@@ -7,7 +7,7 @@ import { Navigation } from "swiper/modules";
 
 const swiperSettings = {
 	loop: true,
-	spaceBetween: 20,
+	spaceBetween: 5,
 	grabCursor: true,
 	navigation: {
 		nextEl: ".swiper-button-next",
@@ -37,7 +37,6 @@ function Teams({ teams }) {
 	return (
 		<div className="section aximo-section-padding2">
 			<div className="container">
-
 				<div className="row aximo_screenfix_right">
 					<div className="swiper aximo-iconbox-slider">
 						<div className="aximo-section-title">

@@ -1,46 +1,20 @@
-import React, { useRef, useState } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-
-const Model = ({ url }) => {
-    const gltf = useLoader(GLTFLoader, url);
-    console.log("the model", gltf)
-    const meshRef = useRef();
-    const [isHovered, setIsHovered] = useState(false);
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-    useFrame(() => {
-        if (isHovered && meshRef.current) {
-            // Rotasi objek berdasarkan posisi kursor
-            meshRef.current.rotation.y = mousePosition.x * 0.1; // Sesuaikan kecepatan rotasi
-        }
-    });
-
-    const handleMouseMove = (event) => {
-        // Normalisasi posisi kursor ke rentang [-1, 1]
-        const x = (event.clientX / window.innerWidth) * 2 - 1;
-        const y = -(event.clientY / window.innerHeight) * 2 + 1;
-        setMousePosition({ x, y });
-    };
-
-    return (
-        <primitive
-            ref={meshRef}
-            object={gltf.scene}
-            onPointerOver={() => setIsHovered(true)}
-            onPointerOut={() => setIsHovered(false)}
-            onPointerMove={handleMouseMove}
-        />
-    );
-};
+import React from 'react';
+import { Canvas } from '@react-three/fiber';
+import Model from './Model';
+import { Environment, } from '@react-three/drei';
 
 const GLBViewer = () => {
     return (
-        <Canvas style={{ width: '100vw', height: '100vh' }} className='border border-danger'>
+        // <div className='hero-canvas'>
+        <Canvas className='w-100' >
+            <Environment preset="park" />
             <ambientLight intensity={0.5} />
-            <pointLight position={[10, 10, 10]} />
-            <Model url="/model/facebook_3d.glb" />
+            <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
+            <pointLight position={[-10, -10, -10]} intensity={0.5} />
+            <Model url="/model/face-v1.glb" />
         </Canvas>
+        // </div>
+
     );
 };
 
