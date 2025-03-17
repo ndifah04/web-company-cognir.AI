@@ -4,7 +4,7 @@ function ServiceCard({ service: { title, description, icon } }) {
 	return (
 		<div className="aximo-iconbox-wrap">
 			<div className="aximo-iconbox-icon">
-				<i className={`${icon}`}></i>
+				{/* <i className={`${icon}`}></i> */}
 			</div>
 			<div className="aximo-iconbox-data">
 				<h3>{title}</h3>
