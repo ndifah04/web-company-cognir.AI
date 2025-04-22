@@ -1,7 +1,6 @@
-// import SocialX from '@/assets/social-x.svg';
-// import SocialInstagram from '@/assets/social-instagram.svg';
-// import SocialYoutube from '@/assets/social-youtube.svg';
-import Image from 'next/image';
+import { InstagramIcon, TwitterIcon, LinkedinIcon, FacebookIcon, YoutubeIcon } from "lucide-react";
+import Link from "next/link";
+
 
 export const Footer = () => {
     return (
@@ -23,6 +22,21 @@ export const Footer = () => {
                         {/* <SocialX className='hover:text-white transition cursor-pointer' />
                         <SocialInstagram className='hover:text-white transition cursor-pointer' />
                         <SocialYoutube className='hover:text-white transition cursor-pointer' /> */}
+                        <Link href='https://www.instagram.com/CognirAi/#' className="hover:text-white" target="blank">
+                            <InstagramIcon strokeWidth={1.5} />
+                        </Link>
+                        <Link href='https://x.com/CognirAi' className="hover:text-white" target="blank">
+                            <TwitterIcon strokeWidth={1.5} />
+                        </Link >
+                        <Link href='https://www.linkedin.com/company/cognir-ai/' className="hover:text-white" target="blank">
+                            <LinkedinIcon strokeWidth={1.5} />
+                        </Link>
+                        <Link href='https://web.facebook.com/profile.php?id=61575511954285' className="hover:text-white" target="blank">
+                            <FacebookIcon strokeWidth={1.5} />
+                        </Link>
+                        <Link href='https://www.youtube.com/@CognirAI' target="blank">
+                            <YoutubeIcon strokeWidth={1.5} />
+                        </Link>
                     </div>
                 </div>
             </div>
