@@ -1,20 +1,20 @@
 'use client';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 import {
   MenuIcon,
   XIcon,
   LayoutDashboardIcon,
   BookIcon,
   BuildingIcon,
-  LogInIcon,
-  UserPlusIcon,
   PlugIcon,
   CodeIcon,
   RocketIcon,
   CaseSensitiveIcon,
   NewspaperIcon,
-  UsersIcon
+  UsersIcon,
+  InfoIcon
 } from 'lucide-react';
 import Button from '@/components/Button';
 
@@ -47,7 +47,7 @@ const menuItems = [
   {
     title: 'Resource',
     dropdown: [
-      { title: 'Documentation', href: '#', icon: <BookIcon className="w-4 h-4" /> },
+      { title: 'About', href: 'about', icon: <InfoIcon className="w-4 h-4" /> },
       { title: 'Blog', href: '#', icon: <NewspaperIcon className="w-4 h-4" /> },
       { title: 'Community', href: '#', icon: <UsersIcon className="w-4 h-4" /> },
     ]
@@ -69,7 +69,7 @@ function MobileNav({ isOpen, onClose }) {
         >
           <button
             onClick={onClose}
-            className="absolute top-6 right-4 text-white"
+            className="absolute top-6 right-4 text-white cursor-pointer"
           >
             <XIcon className="w-6 h-6" />
           </button>
@@ -80,17 +80,9 @@ function MobileNav({ isOpen, onClose }) {
               <a key={item.title} href="#" className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">{item.title}</a>
             ))}
 
-            <div className="border-t border-white/15 pt-4 mt-4">
-              <a
-                href="#"
-                className="flex items-center gap-3 text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors"
-              >
-                <LogInIcon className="w-5 h-5" />
-                Sign in
-              </a>
-              <Button className="w-full mt-4 flex items-center gap-2 justify-center">
-                <UserPlusIcon className="w-5 h-5" />
-                Sign Up
+            <div className="border-t border-white/15 pt-4 mt-4 px-4">
+              <Button>
+                Join Waitlist
               </Button>
             </div>
           </nav>
@@ -110,11 +102,11 @@ export function Header() {
     <header className='z-50 mt-4 sticky'>
 
       <div className="container mx-auto">
-        <div className="flex justify-between items-center md:border md:border-white/15 md:p-2.5 md:rounded-xl max-w-2xl mx-auto">
+        <div className="flex justify-between items-center border border-white/15 p-2.5 rounded-xl max-w-6xl mx-auto">
           <div className="flex items-center">
-            <div className="border h-10 w-10 rounded-lg inline-flex justify-center items-center border-white/15">
+            <Link className="border h-10 w-10 rounded-lg inline-flex justify-center items-center border-white/15" href='/'>
               <img src="/img/cognir-logo.png" alt="logo cognir" className="h-8 w-8" />
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation (with dropdowns) */}
@@ -148,14 +140,14 @@ export function Header() {
                       >
                         <div className="p-2">
                           {item.dropdown.map((subItem, subIndex) => (
-                            <a
+                            <Link
                               key={subIndex}
                               href={subItem.href}
                               className="flex items-center gap-3 px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/10 transition-colors rounded-lg"
                             >
                               {subItem.icon}
                               {subItem.title}
-                            </a>
+                            </Link>
                           ))}
                         </div>
                       </motion.div>
@@ -171,7 +163,7 @@ export function Header() {
               <Button>Join Waitlist</Button>
             </div>
             <button
-              className="md:hidden text-white"
+              className="md:hidden text-white cursor-pointer"
               onClick={() => setMobileMenuOpen(true)}
             >
               <MenuIcon className="w-6 h-6" />

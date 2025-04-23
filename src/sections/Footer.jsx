@@ -34,7 +34,7 @@ export const Footer = () => {
                         <Link href='https://web.facebook.com/profile.php?id=61575511954285' className="hover:text-white" target="blank">
                             <FacebookIcon strokeWidth={1.5} />
                         </Link>
-                        <Link href='https://www.youtube.com/@CognirAI' target="blank">
+                        <Link href='https://www.youtube.com/@CognirAI' className="hover:text-white" target="blank">
                             <YoutubeIcon strokeWidth={1.5} />
                         </Link>
                     </div>

@@ -32,30 +32,26 @@ export default function Platform() {
         "https://assets.aceternity.com/multi-step-loader.png",
         "https://assets.aceternity.com/vortex.png",
         "https://assets.aceternity.com/wobble-card.png",
-        "https://assets.aceternity.com/world-map.webp",
+        "https://ik.imagekit.io/nurman/pexels-flambo-388007-1112080.jpg?updatedAt=1745350279678",
     ];
+
     return (
         <div
-            className="relative mx-auto my-10 flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-3xl">
+            className="relative mx-auto -mt-20 flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-3xl px-3">
             <h2
-                className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
-                This is your life and it&apos;s ending one{" "}
-                <span
-                    className="relative z-20 inline-block rounded-xl bg-blue-500/40 px-4 py-1 text-white underline decoration-sky-500 decoration-[6px] underline-offset-[16px] backdrop-blur-sm">
-                    moment
-                </span>{" "}
-                at a time.
+                className="relative z-20 mx-auto max-w-6xl text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
+                One Architecture. Any AI Workload. Unmatched Efficiency.
             </h2>
-            <p
-                className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base">
-                You are not your job, you&apos;re not how much money you have in the
-                bank. You are not the car you drive. You&apos;re not the contents of
-                your wallet.
-            </p>
+            <div className="relative z-20 mx-auto max-w-6xl w-full py-8 text-sm text-neutral-200 md:text-base">
+                <p className="max-w-2xl">
+                    Cognir AI’s unified platform streamlines the entire AI lifecycle - from data prep to deployment. Build, optimize, and scale models faster with enterprise-grade security and cost-effective infrastructure
+                </p>
+            </div>
+
 
             {/* overlay */}
             <div
-                className="absolute inset-0 z-10 h-full w-full bg-black/80 dark:bg-black/40" />
+                className="absolute pointer-events-none inset-0 z-10 h-full w-full bg-gradient-to-r from-black/95 to-white/10" />
             <ThreeDMarquee
                 // className="pointer-events-none absolute inset-0 h-full w-full"
                 className="w-full h-full absolute inset-0"
