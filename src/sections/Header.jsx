@@ -55,7 +55,6 @@ const menuItems = [
 
 ];
 
-// MobileNav component with simple menu like your image
 function MobileNav({ isOpen, onClose }) {
   return (
     <AnimatePresence>
@@ -75,11 +74,10 @@ function MobileNav({ isOpen, onClose }) {
           </button>
 
           <nav className="flex flex-col space-y-4">
-            {/* Simple top-level menu items like your image */}
-            {menuItems.map((item) => (
-              <a key={item.title} href="#" className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">{item.title}</a>
-            ))}
-
+            <Link href='/platform' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Platform</Link>
+            <Link href='/solution' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Solution</Link>
+            <Link href='/customer' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Customer</Link>
+            <Link href='/resource' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Resource</Link>
             <div className="border-t border-white/15 pt-4 mt-4 px-4">
               <Button>
                 Join Waitlist
@@ -99,8 +97,7 @@ export function Header() {
 
   return (
     // <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-50 bg-gray-900/80 backdrop-blur">
-    <header className='z-50 mt-4 sticky'>
-
+    <header className='z-50 mt-4 mx-4 sticky'>
       <div className="container mx-auto">
         <div className="flex justify-between items-center border border-white/15 p-2.5 rounded-xl max-w-6xl mx-auto">
           <div className="flex items-center">
