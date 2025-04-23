@@ -1,4 +1,7 @@
 import { ThreeDMarquee } from "@/components/marquee";
+import { ChartColumnBigIcon, ChartPieIcon, FileTextIcon, FolderIcon, HashIcon, HeartPulseIcon, ScaleIcon, StickerIcon, TagIcon } from "lucide-react";
+import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function Platform() {
     const images = [
@@ -36,27 +39,97 @@ export default function Platform() {
     ];
 
     return (
-        <div
-            className="relative mx-auto -mt-20 flex h-screen w-full flex-col items-center justify-center overflow-hidden rounded-3xl px-3">
-            <h2
-                className="relative z-20 mx-auto max-w-6xl text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
-                One Architecture. Any AI Workload. Unmatched Efficiency.
-            </h2>
-            <div className="relative z-20 mx-auto max-w-6xl w-full py-8 text-sm text-neutral-200 md:text-base">
-                <p className="max-w-2xl">
-                    Cognir AI’s unified platform streamlines the entire AI lifecycle - from data prep to deployment. Build, optimize, and scale models faster with enterprise-grade security and cost-effective infrastructure
-                </p>
+        <>
+            <div
+                className="relative mx-auto -mt-20 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-3">
+                <h2
+                    className="relative z-20 mx-auto max-w-6xl text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
+                    One Architecture. Any AI Workload. Unmatched Efficiency.
+                </h2>
+                <div className="relative z-20 mx-auto max-w-6xl w-full py-8 text-sm text-neutral-200 md:text-base">
+                    <p className="max-w-2xl">
+                        Cognir AI’s unified platform streamlines the entire AI lifecycle - from data prep to deployment. Build, optimize, and scale models faster with enterprise-grade security and cost-effective infrastructure
+                    </p>
+                </div>
+
+
+                {/* overlay */}
+                <div
+                    className="absolute pointer-events-none inset-0 z-10 h-full w-full bg-gradient-to-r from-black/95 to-white/10" />
+                <ThreeDMarquee
+                    // className="pointer-events-none absolute inset-0 h-full w-full"
+                    className="w-full h-full absolute inset-0"
+                    images={images} />
+            </div>
+            <div className="max-w-6xl mx-auto flex flex-col gap-2 py-4 items-center">
+                <h3 className="flex items-center w-full">
+                    <span className="flex-grow bg-white/40 rounded h-0.5"></span>
+                    <span className="text-white/40 text-md font-light px-6 py-0.5">Cognir Suite</span>
+                    <span className="flex-grow bg-white/40 rounded h-0.5"></span>
+                </h3>
+                <div className="flex gap-6" id="feature">
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <StickerIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Sentiment</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <TagIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Entities</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <HashIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Topics</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <HeartPulseIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Emotion</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <FileTextIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Summary</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <ChartPieIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Aspect</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <ScaleIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Bias</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <FolderIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Categories</p>
+                    </div>
+                    <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
+                        <ChartColumnBigIcon size={32} strokeWidth={1} />
+                        <p className="font-medium text-xs">Complexity</p>
+                    </div>
+                </div>
+
+            </div>
+            <div className="max-w-6xl mx-auto flex md:px-24 md:py-20 md:flex-row flex-col items-center" id="tool">
+                <div
+                    className="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1
+                        className="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                        Text Sentyment Analysys                        </h1>
+                    <p className="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed dark:text-gray-300">
+                        Our tool detects emotions, bias, and key themes in any content - reviews, social media, or surveys. Get actionable metrics like positivity scores, entity tracking, and automatic summaries. Perfect for brands, researchers, and developers."
+                    </p>
+                    <div className="flex justify-center">
+                        <Link href='https://platform.cognir.ai/' target="blank">
+                            <Button>
+                                Start Exploring
+                            </Button>
+                        </Link>
+                    </div>
+                </div>
+                <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
+                    <img className="object-cover object-center rounded" alt="hero" src="/img/sentymen-screenshot.png" />
+                </div>
             </div>
 
-
-            {/* overlay */}
-            <div
-                className="absolute pointer-events-none inset-0 z-10 h-full w-full bg-gradient-to-r from-black/95 to-white/10" />
-            <ThreeDMarquee
-                // className="pointer-events-none absolute inset-0 h-full w-full"
-                className="w-full h-full absolute inset-0"
-                images={images} />
-        </div>
+        </>
     );
 }
 

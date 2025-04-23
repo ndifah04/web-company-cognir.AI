@@ -9,7 +9,7 @@ import {
   BookIcon,
   BuildingIcon,
   PlugIcon,
-  CodeIcon,
+  BotMessageSquareIcon,
   RocketIcon,
   CaseSensitiveIcon,
   NewspaperIcon,
@@ -23,9 +23,8 @@ const menuItems = [
   {
     title: 'Platform',
     dropdown: [
-      { title: 'Features', href: '#', icon: <LayoutDashboardIcon className="w-4 h-4" /> },
-      { title: 'Integrations', href: '#', icon: <PlugIcon className="w-4 h-4" /> },
-      { title: 'API', href: '#', icon: <CodeIcon className="w-4 h-4" /> },
+      { title: 'Features', href: 'platform/#feature', icon: <LayoutDashboardIcon className="w-4 h-4" /> },
+      { title: 'Text Sentyment', href: 'platform/#tool', icon: <BotMessageSquareIcon className="w-4 h-4" /> },
     ]
   },
   {
