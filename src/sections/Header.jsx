@@ -8,13 +8,13 @@ import {
   LayoutDashboardIcon,
   BookIcon,
   BuildingIcon,
-  PlugIcon,
   BotMessageSquareIcon,
   RocketIcon,
   CaseSensitiveIcon,
   NewspaperIcon,
   UsersIcon,
-  InfoIcon
+  InfoIcon,
+  User2Icon
 } from 'lucide-react';
 import Button from '@/components/Button';
 
@@ -38,9 +38,7 @@ const menuItems = [
   {
     title: 'Customers',
     dropdown: [
-      { title: 'Documentation', href: '#', icon: <BookIcon className="w-4 h-4" /> },
-      { title: 'Blog', href: '#', icon: <NewspaperIcon className="w-4 h-4" /> },
-      { title: 'Community', href: '#', icon: <UsersIcon className="w-4 h-4" /> },
+      { title: 'Customer', href: '/customer', icon: <User2Icon className="w-4 h-4" /> },
     ]
   },
   {

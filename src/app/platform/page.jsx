@@ -57,7 +57,6 @@ export default function Platform() {
                 <div
                     className="absolute pointer-events-none inset-0 z-10 h-full w-full bg-gradient-to-r from-black/95 to-white/10" />
                 <ThreeDMarquee
-                    // className="pointer-events-none absolute inset-0 h-full w-full"
                     className="w-full h-full absolute inset-0"
                     images={images} />
             </div>
@@ -112,7 +111,8 @@ export default function Platform() {
                     className="lg:flex-grow mt-5 md:mt-0   md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                     <h1
                         className="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
-                        Text Sentyment Analysys                        </h1>
+                        Text Sentyment Analysys
+                    </h1>
                     <p className="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed dark:text-gray-300">
                         Our tool detects emotions, bias, and key themes in any content - reviews, social media, or surveys. Get actionable metrics like positivity scores, entity tracking, and automatic summaries. Perfect for brands, researchers, and developers."
                     </p>
@@ -124,7 +124,7 @@ export default function Platform() {
                         </Link>
                     </div>
                 </div>
-                <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6">
+                <div className="lg:max-w-lg lg:w-full mb-5 md:mb-0 md:w-1/2 w-3/6 bg-amber-500">
                     <img className="object-cover object-center rounded" alt="hero" src="/img/sentymen-screenshot.png" />
                 </div>
             </div>
