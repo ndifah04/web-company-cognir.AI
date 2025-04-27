@@ -4,6 +4,7 @@ import Button from "@/components/Button"
 import StarsBg from "@/assets/stars.png"
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 
 export const Hero = () => {
     const sectionRef = useRef(null);
@@ -38,10 +39,6 @@ export const Hero = () => {
 
             {/* First Ring */}
             <motion.div className="absolute h-[344px] w-[344px] md:h-[580px] md:w-[580px] border opacity-20 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                // style={{
-                //     translateY: "-50%",
-                //     translateX: "-50%"
-                // }}
                 animate={{
                     rotate: "1turn"
                 }}
@@ -62,10 +59,7 @@ export const Hero = () => {
 
             {/* Second Ring */}
             <motion.div className="absolute h-[444px] w-[444px] md:h-[780px] md:w-[780px] border border-white/20 border-dashed rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                // style={{
-                //     translateY: "-50%",
-                //     translateX: "50%"
-                // }}
+
                 animate={{
                     rotate: "-1turn",
                 }}
@@ -79,10 +73,7 @@ export const Hero = () => {
 
             {/* Third Ring */}
             <motion.div className="absolute h-[544px] w-[544px] md:h-[980px] md:w-[980px] border border-white opacity-20 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-                // style={{
-                //     translateY: "-50%",
-                //     translateX: "-50%"
-                // }}
+
                 animate={{
                     rotate: "1turn",
                 }}
@@ -101,7 +92,9 @@ export const Hero = () => {
                 <h1 className="text-6xl md:text-[100px] md:leading-none font-semibold tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">COGNIR AI</h1>
                 <p className="text-lg md:text-xl text-white/70 mt-5 text-center max-w-xl mx-auto">Driving Innovation, Shaping Industries, and Expanding Human Potential for a Smarter Tomorrow.</p>
                 <div className="flex justify-center mt-5">
-                    <Button >Join Waitlist</Button>
+                    <Link href="/#feature-tab">
+                        <Button >Get started</Button>
+                    </Link>
                 </div>
             </div>
         </motion.section>

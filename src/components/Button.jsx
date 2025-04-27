@@ -1,6 +1,6 @@
 const Button = ({ children }) => {
     return (
-        <button className='relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-br cursor-pointer from-[#00d4ff] to-[#000080] shadow-[0px_0px_12px_#0077ff]'>
+        <button className='relative py-2 px-3 rounded-lg font-medium text-sm bg-gradient-to-br cursor-pointer from-[#00d4ff] to-[#000080] shadow-[0px_0px_12px_#0077ff] hover:shadow-[0px_0px_14px_#00a6ff] transition duration-100'>
             <div className='absolute inset-0'>
                 <div className='rounded-lg border border-white/20 absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent)]'></div>
                 <div className='rounded-lg border absolute inset-0 border-white/40 [mask-image:linear-gradient(to_top,black,transparent)]'></div>

@@ -72,11 +72,9 @@ function MobileNav({ isOpen, onClose }) {
             <Link href='/solution' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Solution</Link>
             <Link href='/customer' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Customer</Link>
             <Link href='/resource' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Resource</Link>
-            <div className="border-t border-white/15 pt-4 mt-4 px-4">
-              <Button>
-                Join Waitlist
-              </Button>
-            </div>
+            <Link href="/#call-to-action" className='border-t border-white/15 pt-4 mt-4 px-4'>
+              <Button>Join waitlist</Button>
+            </Link>
           </nav>
         </motion.div>
       )}

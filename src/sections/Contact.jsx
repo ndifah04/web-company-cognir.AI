@@ -60,7 +60,7 @@ const Form = () => {
 
 const ContactForm = () => {
     return (
-        <section className="text-gray-600 mx-auto max-w-6xl relative">
+        <section className="text-gray-600 mx-auto max-w-6xl relative" id="contact-form">
             <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap gap-4 flex-wrap-reverse">
                 <div className="w-full bg-white/5 rounded-lg border-white/20 border p-10 flex items-end justify-start relative">
                     <Address />

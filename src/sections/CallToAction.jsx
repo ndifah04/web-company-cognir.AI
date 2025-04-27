@@ -5,6 +5,7 @@ import starBackground from '@/assets/stars.png';
 import gridLines from '@/assets/grid-lines.png'
 import { motion, useMotionTemplate, useMotionValue, useScroll, useTransform } from "framer-motion";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 const useRelativeMousePosition = (to) => {
     const mouseX = useMotionValue(0);
@@ -71,11 +72,13 @@ export const CallToAction = () => {
                             backgroundImage: `url(${gridLines.src})`
                         }}></motion.div>
 
-                    <div className="relative">
+                    <div className="relative" id="call-to-action">
                         <h2 className="text-5xl md:text-6xl font-medium tracking-tighter text-center max-w-md mx-auto">AI Infrastructure, Simplified.</h2>
                         <p className="mt-5 text-lg md:text-xl tracking-tight text-white/70 px-4 text-center max-w-xs mx-auto">Build, deploy, scale - all in one place.</p>
                         <div className="flex justify-center mt-5 md:mt-7">
-                            <Button>Join waitlist</Button>
+                            <Link href="/contact">
+                                <Button>Join waitlist</Button>
+                            </Link>
                         </div>
                     </div>
                 </motion.div>
