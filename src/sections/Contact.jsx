@@ -20,7 +20,7 @@ const Address = () => {
 
 const Form = () => {
     return (
-        <div className="w-full border p-4 rounded-lg border-white/20">
+        <div className="w-full border p-2.5 rounded-lg border-white/20">
             <div className="bg-white/5 flex flex-col rounded-lg md:ml-auto p-8 mt-8 md:mt-0 text-white">
                 <h2 className="text-lg mb-1 font-semibold title-font">Get in Touch</h2>
                 <p className="leading-relaxed mb-5 font-light">Discuss Cognir Enterprise with our experts</p>
