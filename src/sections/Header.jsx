@@ -6,13 +6,11 @@ import {
   MenuIcon,
   XIcon,
   LayoutDashboardIcon,
-  BookIcon,
   BuildingIcon,
   BotMessageSquareIcon,
   RocketIcon,
   CaseSensitiveIcon,
-  NewspaperIcon,
-  UsersIcon,
+  MessageSquareIcon,
   InfoIcon,
   User2Icon
 } from 'lucide-react';
@@ -44,9 +42,8 @@ const menuItems = [
   {
     title: 'Resource',
     dropdown: [
-      { title: 'About', href: 'about', icon: <InfoIcon className="w-4 h-4" /> },
-      { title: 'Blog', href: '#', icon: <NewspaperIcon className="w-4 h-4" /> },
-      { title: 'Community', href: '#', icon: <UsersIcon className="w-4 h-4" /> },
+      { title: 'About', href: '/about', icon: <InfoIcon className="w-4 h-4" /> },
+      { title: 'Contact', href: '/contact', icon: <MessageSquareIcon className="w-4 h-4" /> },
     ]
   },
 

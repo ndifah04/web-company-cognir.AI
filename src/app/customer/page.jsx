@@ -30,29 +30,47 @@ const letterVariants = {
 export default function Customer() {
     const dots = useMemo(() => [
         {
-            start: { lat: 64.2008, lng: -149.4937 },
-            end: { lat: 34.0522, lng: -118.2437 },
+            start: { lat: 64.2008, lng: -149.4937 }, // Alaska
+            end: { lat: 34.0522, lng: -118.2437 },   // Los Angeles
         },
         {
-            start: { lat: 64.2008, lng: -149.4937 },
-            end: { lat: -15.7975, lng: -47.8919 },
+            start: { lat: 64.2008, lng: -149.4937 }, // Alaska
+            end: { lat: -15.7975, lng: -47.8919 },    // Brazil
         },
         {
-            start: { lat: -15.7975, lng: -47.8919 },
-            end: { lat: 38.7223, lng: -9.1393 },
+            start: { lat: -15.7975, lng: -47.8919 },  // Brazil
+            end: { lat: 38.7223, lng: -9.1393 },      // Lisbon
         },
         {
-            start: { lat: 51.5074, lng: -0.1278 },
-            end: { lat: 28.6139, lng: 77.209 },
+            start: { lat: 51.5074, lng: -0.1278 },    // London
+            end: { lat: 28.6139, lng: 77.209 },       // New Delhi
         },
         {
-            start: { lat: 28.6139, lng: 77.209 },
-            end: { lat: 43.1332, lng: 131.9113 },
+            start: { lat: 28.6139, lng: 77.209 },     // New Delhi
+            end: { lat: 43.1332, lng: 131.9113 },     // Vladivostok
         },
         {
-            start: { lat: 28.6139, lng: 77.209 },
-            end: { lat: -1.2921, lng: 36.8219 },
+            start: { lat: 28.6139, lng: 77.209 },     // New Delhi
+            end: { lat: -1.2921, lng: 36.8219 },      // Nairobi
         },
+
+        // Koneksi baru ke Sulawesi Selatan (Makassar)
+        {
+            start: { lat: -5.1477, lng: 119.4327 },   // Makassar
+            end: { lat: 28.6139, lng: 77.209 },       // New Delhi
+        },
+        {
+            start: { lat: -5.1477, lng: 119.4327 },   // Makassar
+            end: { lat: -6.2088, lng: 106.8456 },     // Jakarta
+        },
+        {
+            start: { lat: -5.1477, lng: 119.4327 },   // Makassar
+            end: { lat: 1.3521, lng: 103.8198 },      // Singapore
+        },
+        {
+            start: { lat: -5.1477, lng: 119.4327 },   // Makassar
+            end: { lat: 35.6762, lng: 139.6503 },    // Tokyo
+        }
     ], []);
 
     return (
