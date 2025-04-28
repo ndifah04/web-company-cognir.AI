@@ -1,5 +1,6 @@
 import ContactForm from "@/sections/Contact"
 import { UserPlus, InstagramIcon, TwitterIcon, LinkedinIcon, FacebookIcon, YoutubeIcon } from "lucide-react"
+import Link from "next/link"
 
 
 export default function Contact() {
@@ -20,28 +21,28 @@ export default function Contact() {
                         <h3 className="font-medium text-xl">Follow Us</h3>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                        <div className="text-white/70 text-lg order-2 md:order-1 h-full">
+                        <div className="text-white/40 text-lg order-2 md:order-1 h-full">
                             <div className="flex justify-between mb-8">
-                                <div className="h-20 w-20 bg-white/5 rounded-xl flex flex-col justify-center items-center gap-2">
+                                <Link href="https://www.instagram.com/CognirAi/#" className="h-20 w-20 bg-white/5 transition-all hover:text-white hover:border hover:border-white rounded-xl flex flex-col justify-center items-center gap-2" target="blank">
                                     <InstagramIcon size={32} strokeWidth={1} />
                                     <p className="font-light tracking-wider text-xs">Instagram</p>
-                                </div>
-                                <div className="h-20 w-20 bg-white/5 rounded-xl flex flex-col justify-center items-center gap-2">
+                                </Link>
+                                <Link href="https://x.com/CognirAi" className="h-20 w-20 bg-white/5 transition-all hover:text-white hover:border hover:border-white rounded-xl flex flex-col justify-center items-center gap-2" target="blank">
                                     <TwitterIcon size={32} strokeWidth={1} />
                                     <p className="font-light text-xs">Twitter</p>
-                                </div>
-                                <div className="h-20 w-20 bg-white/5 rounded-xl flex flex-col justify-center items-center gap-2">
+                                </Link>
+                                <Link href="https://www.linkedin.com/company/cognir-ai/" className="h-20 w-20 bg-white/5 transition-all hover:text-white hover:border hover:border-white rounded-xl flex flex-col justify-center items-center gap-2" target="blank">
                                     <LinkedinIcon size={32} strokeWidth={1} />
                                     <p className="font-light tracking-wider text-xs">LinkedIn</p>
-                                </div>
-                                <div className="h-20 w-20 bg-white/5 rounded-xl flex flex-col justify-center items-center gap-2">
+                                </Link>
+                                <Link href="https://web.facebook.com/profile.php?id=61575511954285" className="h-20 w-20 bg-white/5 transition-all hover:text-white hover:border hover:border-white rounded-xl flex flex-col justify-center items-center gap-2" target="blank">
                                     <FacebookIcon size={32} strokeWidth={1} />
                                     <p className="font-light tracking-wider text-xs">Facebook</p>
-                                </div>
-                                <div className="h-20 w-20 bg-white/5 rounded-xl flex flex-col justify-center items-center gap-2">
+                                </Link>
+                                <Link href="https://www.youtube.com/@CognirAI" className="h-20 w-20 bg-white/5 transition-all hover:text-white hover:border hover:border-white rounded-xl flex flex-col justify-center items-center gap-2" target="blank">
                                     <YoutubeIcon size={32} strokeWidth={1} />
                                     <p className="font-light tracking-wider text-xs">Youtube</p>
-                                </div>
+                                </Link>
                             </div>
 
                             <div className="w-full rounded-lg border border-white/15 p-8">

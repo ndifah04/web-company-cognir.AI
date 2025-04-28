@@ -19,9 +19,6 @@ export const Footer = () => {
                         <a href="#" className='hover:text-white transition'>Changelog</a>
                     </nav>
                     <div className='flex gap-5 items-center mt-5 lg:mt-0 text-white/40 lg:flex-1 lg:justify-end'>
-                        {/* <SocialX className='hover:text-white transition cursor-pointer' />
-                        <SocialInstagram className='hover:text-white transition cursor-pointer' />
-                        <SocialYoutube className='hover:text-white transition cursor-pointer' /> */}
                         <Link href='https://www.instagram.com/CognirAi/#' className="hover:text-white" target="blank">
                             <InstagramIcon strokeWidth={1.5} />
                         </Link>
