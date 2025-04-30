@@ -7,7 +7,7 @@ import { images } from '@/data/images';
 export const LogoTicker = () => {
     return (
         <section className='py-20 md:py-24 max-w-6xl mx-auto'>
-            <div className="container">
+            <div className="container mx-auto">
                 <div className='flex items-center gap-5'>
                     <div className="flex-1 md:flex-none">
                         <h2>Runs on top-tier AI models</h2>

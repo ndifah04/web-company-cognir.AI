@@ -60,13 +60,13 @@ export default function Platform() {
                     className="w-full h-full absolute inset-0"
                     images={images} />
             </div>
-            <div className="max-w-6xl mx-auto flex flex-col gap-2 py-4 items-center">
+            <div className="max-w-6xl mx-auto flex flex-col gap-2 py-4 items-center px-6">
                 <h3 className="flex items-center w-full">
                     <span className="flex-grow bg-white/40 rounded h-0.5"></span>
                     <span className="text-white/40 text-md font-light px-6 py-0.5">Cognir Suite</span>
                     <span className="flex-grow bg-white/40 rounded h-0.5"></span>
                 </h3>
-                <div className="flex gap-6">
+                <div className="flex gap-6 flex-wrap justify-center">
                     <div className="h-20 w-20 border border-white/15 text-white/40 rounded-xl flex flex-col justify-center items-center gap-2">
                         <StickerIcon size={32} strokeWidth={1} />
                         <p className="font-medium text-xs">Sentiment</p>
@@ -106,7 +106,7 @@ export default function Platform() {
                 </div>
 
             </div>
-            <div className="max-w-6xl mx-auto flex md:px-24 md:py-20 md:flex-row flex-col items-center" id="tool">
+            <div className="max-w-6xl mx-auto text-center md:text-right flex md:px-24 md:py-20 md:flex-row flex-col items-center px-6" id="tool">
                 <div
                     className="lg:flex-grow mt-5 md:mt-0  md:w-1.5/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center">
 

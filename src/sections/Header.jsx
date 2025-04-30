@@ -11,7 +11,7 @@ import {
   RocketIcon,
   CaseSensitiveIcon,
   MessageSquareIcon,
-  InfoIcon,
+  Building2Icon,
   User2Icon
 } from 'lucide-react';
 import Button from '@/components/Button';
@@ -21,8 +21,8 @@ const menuItems = [
   {
     title: 'Platform',
     dropdown: [
-      { title: 'Features', href: 'platform/#feature', icon: <LayoutDashboardIcon className="w-4 h-4" /> },
-      { title: 'Text Sentyment', href: 'platform/#tool', icon: <BotMessageSquareIcon className="w-4 h-4" /> },
+      { title: 'Features', href: '/platform/#feature', icon: <LayoutDashboardIcon className="w-4 h-4" /> },
+      { title: 'Text Sentyment', href: '/platform/#tool', icon: <BotMessageSquareIcon className="w-4 h-4" /> },
     ]
   },
   {
@@ -42,7 +42,7 @@ const menuItems = [
   {
     title: 'Resource',
     dropdown: [
-      { title: 'About', href: '/about', icon: <InfoIcon className="w-4 h-4" /> },
+      { title: 'About', href: '/about', icon: <Building2Icon className="w-4 h-4" /> },
       { title: 'Contact', href: '/contact', icon: <MessageSquareIcon className="w-4 h-4" /> },
     ]
   },

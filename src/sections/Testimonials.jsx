@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 export const Testimonials = () => {
     return (
         <section className="py-20 md:py-24">
-            <div className="container">
+            <div className="container mx-auto">
                 <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium">Beyond Expectations.</h2>
                 <p className="mt-5 text-center text-lg md:text-xl tracking-tight text-white/70 max-w-xs mx-auto">Our revolutionary AI SEO tools have transformed our client's strategies.</p>
 

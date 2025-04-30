@@ -8,7 +8,7 @@ export default function Contact() {
 
         <>
             <h2 className='text-5xl md:text-6xl text-center font-medium tracking-tighter mt-14'>Contact Us</h2>
-            <p className='text-white/70 text-lg md:text-xl text-center tracking-tight mt-5 max-w-xl mx-auto'>One We are happy to answer your questions and help you deliver computer vision.</p>
+            <p className='text-white/70 text-lg md:text-xl text-center tracking-tight mt-5 max-w-xl mx-auto'>We are happy to answer your questions and help you deliver computer vision.</p>
             <ContactForm />
 
             <div className='mt-3 border border-white/15 rounded-xl p-2.5 mx-auto max-w-6xl mb-14'>
@@ -87,7 +87,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
