@@ -13,8 +13,6 @@ export default function AboutSection() {
 
                 </section>
 
-
-
                 {/* The Cognir Story */}
                 <section className="py-20 px-6">
                     <div className="max-w-4xl mx-auto text-center">

@@ -8,11 +8,13 @@ import {
   LayoutDashboardIcon,
   BuildingIcon,
   BotMessageSquareIcon,
-  RocketIcon,
-  CaseSensitiveIcon,
   MessageSquareIcon,
   Building2Icon,
-  User2Icon
+  User2Icon,
+  ShieldIcon,
+  HeartPulseIcon,
+  ShoppingBasketIcon,
+  BriefcaseBusinessIcon
 } from 'lucide-react';
 import Button from '@/components/Button';
 
@@ -28,9 +30,11 @@ const menuItems = [
   {
     title: 'Solution',
     dropdown: [
-      { title: 'For Startups', href: '#', icon: <RocketIcon className="w-4 h-4" /> },
-      { title: 'For Enterprises', href: '#', icon: <BuildingIcon className="w-4 h-4" /> },
-      { title: 'Case Studies', href: '#', icon: <CaseSensitiveIcon className="w-4 h-4" /> },
+      { title: 'HealthCare', href: '#', icon: <HeartPulseIcon className="w-4 h-4" /> },
+      { title: 'Security', href: '#', icon: <ShieldIcon className="w-4 h-4" /> },
+      { title: 'Ecomerce', href: '#', icon: <ShoppingBasketIcon className="w-4 h-4" /> },
+      { title: 'HRD', href: '#', icon: <BuildingIcon className="w-4 h-4" /> },
+      { title: 'Meeting', href: '#', icon: <BriefcaseBusinessIcon className="w-4 h-4" /> },
     ]
   },
   {
