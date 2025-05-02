@@ -14,11 +14,11 @@ import {
   ShieldIcon,
   HeartPulseIcon,
   ShoppingBasketIcon,
-  BriefcaseBusinessIcon
+  BriefcaseBusinessIcon,
+  CarIcon
 } from 'lucide-react';
 import Button from '@/components/Button';
 
-// Menu items with dropdown content (unchanged from original)
 const menuItems = [
   {
     title: 'Platform',
@@ -30,11 +30,12 @@ const menuItems = [
   {
     title: 'Solution',
     dropdown: [
-      { title: 'HealthCare', href: '#', icon: <HeartPulseIcon className="w-4 h-4" /> },
-      { title: 'Security', href: '#', icon: <ShieldIcon className="w-4 h-4" /> },
-      { title: 'Ecomerce', href: '#', icon: <ShoppingBasketIcon className="w-4 h-4" /> },
-      { title: 'HRD', href: '#', icon: <BuildingIcon className="w-4 h-4" /> },
-      { title: 'Meeting', href: '#', icon: <BriefcaseBusinessIcon className="w-4 h-4" /> },
+      { title: 'HealthCare', href: '/solution/health', icon: <HeartPulseIcon className="w-4 h-4" /> },
+      { title: 'Security', href: '/solution/security', icon: <ShieldIcon className="w-4 h-4" /> },
+      { title: 'Ecomerce', href: '/solution/ecomerce', icon: <ShoppingBasketIcon className="w-4 h-4" /> },
+      { title: 'HRD', href: '/solution/hrd', icon: <BuildingIcon className="w-4 h-4" /> },
+      { title: 'Enterprise', href: '/solution/meeting', icon: <BriefcaseBusinessIcon className="w-4 h-4" /> },
+      { title: 'Transportation', href: '/solution/transportation', icon: <CarIcon className='w-4 h-4' /> }
     ]
   },
   {
