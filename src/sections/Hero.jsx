@@ -16,10 +16,11 @@ export const Hero = () => {
     const backgroundPositionY = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
     return (
-        <motion.section className="h-[492px] md:h-[800px] flex items-center justify-center relative [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)]"
+        <motion.section className="h-[492px] md:h-[800px] flex items-center justify-center [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] "
             style={{
                 backgroundImage: `url(${StarsBg.src})`,
-                backgroundPositionY
+                backgroundPositionY,
+                position: 'relative',
             }}
             animate={{
                 backgroundPositionX: StarsBg.width
@@ -88,7 +89,7 @@ export const Hero = () => {
                 <div className="absolute h-2 w-2 bg-white top-1/2 left-full -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
             </motion.div>
 
-            <div className="container relative mt-16">
+            <div className="relative mt-16">
                 <h1 className="text-6xl md:text-[100px] md:leading-none font-semibold tracking-tighter bg-white bg-[radial-gradient(100%_100%_at_top_left,white,white,rgb(74,32,138,.5))] text-transparent bg-clip-text text-center">COGNIR AI</h1>
                 <p className="text-lg md:text-xl text-white/70 mt-5 text-center max-w-xl mx-auto">Driving Innovation, Shaping Industries, and Expanding Human Potential for a Smarter Tomorrow.</p>
                 <div className="flex justify-center mt-5">

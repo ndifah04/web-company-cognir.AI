@@ -5,8 +5,8 @@ import Link from "next/link";
 export const Footer = () => {
     return (
         <footer className="py-5 border-t border-white/15">
-            <div className="container mx-auto">
-                <div className="flex flex-col lg:flex-row lg:items-center gap-8  max-w-6xl mx-auto">
+            <div className="mx-auto">
+                <div className="flex flex-col lg:flex-row lg:items-center gap-8 max-w-6xl mx-auto">
                     <div className='flex items-center lg:flex-1 gap-2 lg:justify-start'>
                         <img src="/img/cognir-logo.png" alt="logo cognir" className='h-6 w-6' />
                         <h3 className='font-medium'>Cognir AI Official Website</h3>

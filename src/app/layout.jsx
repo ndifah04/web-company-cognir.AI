@@ -15,9 +15,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={twMerge(inter.className, "bg-black text-white antialiased")}>
-        <Header />
-        {children}
-        <Footer />
+        <div className="w-full">
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );

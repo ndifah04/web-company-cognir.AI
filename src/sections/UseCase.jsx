@@ -16,7 +16,7 @@ export const Testimonials = () => {
 
     return (
         <section className="py-20 md:py-24 bg-gradient-to-b from-black to-gray-900/50">
-            <div className="container">
+            {/* <div className="container"> */}
                 <h2 className="text-5xl md:text-6xl text-center tracking-tighter font-medium">Proven Use Cases</h2>
                 <p className="mt-5 text-center text-lg md:text-xl tracking-tight text-white/70 max-w-2xl mx-auto">
                     Real-world applications of our AI solutions delivering measurable impact
@@ -89,7 +89,7 @@ export const Testimonials = () => {
                 </div>
 
 
-            </div>
+            {/* </div> */}
         </section>
     );
 };

@@ -45,7 +45,7 @@ export const CallToAction = () => {
 
     return (
         <section className="py-20 md:py-24 relative max-w-6xl mx-auto" ref={sectionRef}>
-            <div className="container mx-auto">
+            <div className="mx-auto">
                 <motion.div className="border border-white/15 py-24 rounded-xl overflow-hidden relative group"
                     style={{
                         backgroundImage: `url(${starBackground.src})`,
