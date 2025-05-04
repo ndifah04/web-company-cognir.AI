@@ -74,7 +74,7 @@ export default function Customer() {
     ], []);
 
     return (
-        <div className="py-40 bg-black w-full max-w-6xl mx-auto px-4">
+        <div className="py-40 bg-black w-full max-w-6xl mx-auto">
             <div className="max-w-6xl mx-auto text-center">
                 <p className="font-bold text-xl md:text-4xl text-white">
                     Let’s Build {" "}

@@ -14,12 +14,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={twMerge(inter.className, "bg-black text-white antialiased")}>
-        <div className="w-full">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+      <body className={twMerge(inter.className, "bg-black dark text-white antialiased overflow-x-hidden px-4")}>
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   );

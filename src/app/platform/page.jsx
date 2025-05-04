@@ -41,7 +41,7 @@ export default function Platform() {
     return (
         <>
             <div id="feature"
-                className="relative mx-auto -mt-20 flex h-screen w-full flex-col items-center justify-center overflow-hidden px-3">
+                className="relative mx-auto -mt-20 flex h-screen w-full flex-col items-center justify-center overflow-hidden">
                 <h2
                     className="relative z-20 mx-auto max-w-6xl text-2xl font-medium text-balance text-white md:text-4xl lg:text-6xl">
                     One Architecture. Any AI Workload. Unmatched Efficiency.
