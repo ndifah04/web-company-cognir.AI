@@ -15,7 +15,9 @@ import {
   HeartPulseIcon,
   ShoppingBasketIcon,
   BriefcaseBusinessIcon,
-  CarIcon
+  CarIcon,
+  ChevronDownIcon,
+  ChevronUpIcon
 } from 'lucide-react';
 import Button from '@/components/Button';
 
@@ -55,6 +57,8 @@ const menuItems = [
 ];
 
 function MobileNav({ isOpen, onClose }) {
+  const [expandedMenu, setExpandedMenu] = useState(null);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -63,7 +67,7 @@ function MobileNav({ isOpen, onClose }) {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur z-40 pt-20 px-4"
+          className="md:hidden fixed inset-0 bg-gray-900/95 backdrop-blur z-40 pt-20 px-4 overflow-y-auto"
         >
           <button
             onClick={onClose}
@@ -72,11 +76,48 @@ function MobileNav({ isOpen, onClose }) {
             <XIcon className="w-6 h-6" />
           </button>
 
-          <nav className="flex flex-col space-y-4">
-            <Link href='/platform' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Platform</Link>
-            <Link href='/solution' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Solution</Link>
-            <Link href='/customer' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Customer</Link>
-            <Link href='/resource' className="text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors">Resource</Link>
+          <nav className="flex flex-col space-y-2">
+            {menuItems.map((item) => (
+              <div key={item.title} className="flex flex-col">
+                <button
+                  className="flex justify-between items-center text-lg text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-colors"
+                  onClick={() => setExpandedMenu(expandedMenu === item.title ? null : item.title)}
+                >
+                  <span>{item.title}</span>
+                  {expandedMenu === item.title ?
+                    <ChevronUpIcon className="w-4 h-4" /> :
+                    <ChevronDownIcon className="w-4 h-4" />
+                  }
+                </button>
+
+                <AnimatePresence>
+                  {expandedMenu === item.title && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="pl-4 ml-4 border-l border-white/15 py-2 space-y-2">
+                        {item.dropdown.map((subItem, index) => (
+                          <Link
+                            key={index}
+                            href={subItem.href}
+                            className="flex items-center gap-2 py-2 px-3 text-white/70 hover:text-white rounded-lg hover:bg-white/10 transition-colors"
+                            onClick={onClose}
+                          >
+                            {subItem.icon}
+                            <span>{subItem.title}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+
             <Link href="/#call-to-action" className='border-t border-white/15 pt-4 mt-4 px-4'>
               <Button>Join waitlist</Button>
             </Link>

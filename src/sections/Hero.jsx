@@ -16,7 +16,7 @@ export const Hero = () => {
     const backgroundPositionY = useTransform(scrollYProgress, [0, 1], [-300, 300]);
 
     return (
-        <motion.section className="h-[492px] md:h-[800px] flex items-center justify-center [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] "
+        <motion.section className="h-[492px] md:h-[800px] flex items-center justify-center [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent)] -mx-4"
             style={{
                 backgroundImage: `url(${StarsBg.src})`,
                 backgroundPositionY,
