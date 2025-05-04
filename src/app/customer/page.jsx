@@ -1,7 +1,8 @@
 "use client";
-import { useMemo } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import CustomersPage from "@/sections/Customer";
 
 const WorldMap = dynamic(() => import('@/components/WorldMap').then(mod => mod.default), {
@@ -28,6 +29,24 @@ const letterVariants = {
 };
 
 export default function Customer() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        // Function to check if viewport is mobile
+        const checkIfMobile = () => {
+            setIsMobile(window.innerWidth < 768); // 768px is typical md breakpoint
+        };
+
+        // Check on initial render
+        checkIfMobile();
+
+        // Add event listener for window resize
+        window.addEventListener('resize', checkIfMobile);
+
+        // Cleanup
+        return () => window.removeEventListener('resize', checkIfMobile);
+    }, []);
+
     const dots = useMemo(() => [
         {
             start: { lat: 64.2008, lng: -149.4937 }, // Alaska
@@ -77,7 +96,7 @@ export default function Customer() {
         <div className="py-40 bg-black w-full max-w-6xl mx-auto">
             <div className="max-w-6xl mx-auto text-center">
                 <p className="font-bold text-xl md:text-4xl text-white">
-                    Let’s Build {" "}
+                    Let's Build {" "}
                     <span className="text-neutral-400">
                         {"Something-Incredible".split("").map((letter, idx) => (
                             <motion.span
@@ -103,17 +122,28 @@ export default function Customer() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
                 >
-                    We’re looking for forward-thinking partners who want to shape the future together. Whether you're a startup, SME, or enterprise – we’re ready to collaborate and create solutions that matter.
+                    We're looking for forward-thinking partners who want to shape the future together. Whether you're a startup, SME, or enterprise – we're ready to collaborate and create solutions that matter.
                 </motion.p>
             </div>
             <motion.div
                 initial="hidden"
                 animate="show"
                 variants={containerVariants}
+                className="w-full"
             >
-                <WorldMap dots={dots} />
+                {isMobile ? (
+                    <div className="relative w-full h-[300px] md:h-[495px] rounded-lg overflow-hidden">
+                        <Image
+                            src="/img/map-mobile.png"
+                            alt="World map with connection points"
+                            fill
+                            className="object-cover rounded-lg"
+                        />
+                    </div>
+                ) : (
+                    <WorldMap dots={dots} />
+                )}
             </motion.div>
-
 
             <CustomersPage />
         </div>
