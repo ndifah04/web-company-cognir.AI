@@ -1,5 +1,5 @@
 import { BrainCircuit, ShieldCheck, LayoutGrid } from 'lucide-react';
-import TeamCard from '@/components/TeamCard';
+import { TeamCard, TeamCardMobile } from '@/components/TeamCard';
 import { teamMembers } from '@/data/team';
 
 export default function About() {
@@ -50,11 +50,21 @@ export default function About() {
                 <div className="max-w-6xl mx-auto text-center">
                     <h2 className="text-3xl font-medium mb-12">Meet the Cognir AI Team</h2>
                     {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4"> */}
-                    <div className='flex flex-wrap justify-center gap-4'>
+                    <div className='hidden md:flex flex-wrap justify-center gap-4'>
                         {teamMembers.map((member, index) => (
                             <TeamCard key={index} name={member.name} role={member.role} photoUrl={member.photoUrl} socials={member.socials} />
                         ))}
+
+
                     </div>
+
+                    <div className='grid grid-cols-2 grid-rows-4 md:grid-cols-3 md:grid-rows-3 gap-4 md:hidden'>
+                        {teamMembers.map((member, index) => (
+                            <TeamCardMobile key={index} name={member.name} role={member.role} photoUrl={member.photoUrl} socials={member.socials} />
+                        ))}
+                    </div>
+
+
                 </div>
             </section>
         </main>

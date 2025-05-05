@@ -2,7 +2,7 @@
 export const teamMembers = [
     {
         name: 'Nurman Awaluddin',
-        role: 'Chief Executive Officer (CEO)',
+        role: 'Chief Executive Officer',
         photoUrl: 'https://ik.imagekit.io/nurman/nurman.jpg?updatedAt=1745783898350',
         socials: {
             github: 'https://github.com/Nurman2021',
@@ -12,7 +12,7 @@ export const teamMembers = [
     },
     {
         name: 'Nurmisba',
-        role: 'Chief Financial Officer (CFO)',
+        role: 'Chief Financial Officer',
         photoUrl: 'https://ik.imagekit.io/nurman/misba.jpg?updatedAt=1745962408258',
         socials: {
             github: '#',
@@ -22,7 +22,7 @@ export const teamMembers = [
     },
     {
         name: 'Ahmad Faisal',
-        role: 'Chief Marketing Officer (CMO): ',
+        role: 'Chief Marketing Officer',
         photoUrl: 'https://ik.imagekit.io/nurman/faisal.jpg?updatedAt=1745962408499',
         socials: {
             github: 'https://github.com/Ahmadfaisal04',
@@ -32,7 +32,7 @@ export const teamMembers = [
     },
     {
         name: 'Galbi Nadifah',
-        role: 'Chief Operating Officer (COO)',
+        role: 'Chief Operating Officer',
         photoUrl: 'https://ik.imagekit.io/nurman/difa.jpg?updatedAt=1745962408127',
         socials: {
             github: 'https://github.com/ndifah04',
@@ -52,7 +52,7 @@ export const teamMembers = [
     },
     {
         name: 'Salsabila Putri',
-        role: 'Chief Technology Officer (CTO)',
+        role: 'Chief Technology Officer',
         photoUrl: 'https://ik.imagekit.io/nurman/salsa.jpg?updatedAt=1745962408312',
         socials: {
             github: 'https://github.com/salsabilaputri95',
@@ -62,7 +62,7 @@ export const teamMembers = [
     },
     {
         name: 'Windu Yoga Nugraha',
-        role: 'Chief Human Resources Officer (CHRO)',
+        role: 'Chief Human Resource',
         photoUrl: 'https://ik.imagekit.io/nurman/windu.jpg?updatedAt=1745962408451',
         socials: {
             github: '#',

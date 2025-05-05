@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { GithubIcon, InstagramIcon, LinkedinIcon } from 'lucide-react';
 
-export default function TeamCard({ name, role, photoUrl, socials }) {
+function TeamCard({ name, role, photoUrl, socials }) {
     return (
         <div className='border p-2.5 rounded-lg border-white/20'>
             <motion.div
@@ -52,3 +52,33 @@ export default function TeamCard({ name, role, photoUrl, socials }) {
 
     );
 }
+
+function TeamCardMobile({ name, role, photoUrl, socials }) {
+    return (
+        <div className='border p-2.5 rounded-lg border-white/20'>
+            <img src={photoUrl} alt={name} className='rounded-lg' />
+            <p className='font-extrabold mt-4'>{name}</p>
+            <p className='font-light text-sm'>{role}</p>
+            <div className='flex mt-4 gap-4 items-center h-20 justify-center'>
+                {socials.github && (
+                    <a href={socials.github} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
+                        <GithubIcon strokeWidth={1.2} size={14} className="w-[28px] h-[28px] hover:fill-black hover:opacity-70" />
+                    </a>
+                )}
+                {socials.linkedin && (
+                    <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
+                        <LinkedinIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:fill-[#00acee] hover:opacity-70" />
+                    </a>
+                )}
+                {socials.instagram && (
+                    <a href={socials.instagram} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
+                        <InstagramIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:fill-pink-800 hover:opacity-70" />
+                    </a>
+                )}
+            </div>
+        </div>
+    )
+}
+
+export { TeamCard, TeamCardMobile }
+
