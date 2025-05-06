@@ -1,3 +1,7 @@
+'use client'
+
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser'
 import Button from "@/components/Button";
 
 const Address = () => {
@@ -19,17 +23,76 @@ const Address = () => {
 
 
 const Form = () => {
+    const formRef = useRef();
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+    const [error, setError] = useState(null);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError(null);
+
+        emailjs.sendForm(
+            process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+            process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+            formRef.current,
+            process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        ).then((result) => {
+            setLoading(false);
+            setSuccess(true);
+            setFormData({ name: '', email: '', message: '' });
+
+            setTimeout(() => setSuccess(false), 5000)
+        }).catch((error) => {
+            setLoading(false);
+            setError('Failed to send message. Please try again.');
+            console.error('EmailJS Error:', error);
+        });
+    }
     return (
         <div className="w-full border p-2.5 rounded-lg border-white/20">
-            <div className="bg-white/5 flex flex-col rounded-lg md:ml-auto p-8 mt-8 md:mt-0 text-white">
+            <form
+                ref={formRef}
+                onSubmit={handleSubmit}
+                className="bg-white/5 flex flex-col rounded-lg md:ml-auto p-8 mt-8 md:mt-0 text-white">
                 <h2 className="text-lg mb-1 font-semibold title-font">Get in Touch</h2>
                 <p className="leading-relaxed mb-5 font-light">Discuss Cognir Enterprise with our experts</p>
+
+
+                {success && (
+                    <div className="mb-4 p-2 bg-green-900/50 text-green-300 rounded">
+                        Your message has been sent successfully!
+                    </div>
+                )}
+
+
+                {error && (
+                    <div className="mb-4 p-2 bg-red-900/50 text-red-300 rounded">
+                        {error}
+                    </div>
+                )}
+
                 <div className="relative mb-4">
                     <label htmlFor="name" className="leading-7 text-sm">Name</label>
                     <input
                         type="text"
                         id="name"
                         name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
                         className="w-full bg-zinc-800 rounded focus-visible:ring-neutral-600 focus:ring-2 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                 </div>
@@ -39,6 +102,9 @@ const Form = () => {
                         type="email"
                         id="email"
                         name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
                         className="w-full bg-zinc-800 rounded focus-visible:ring-neutral-600 focus:ring-2 text-base outline-none py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                     />
                 </div>
@@ -47,13 +113,16 @@ const Form = () => {
                     <textarea
                         id="message"
                         name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        required
                         className="w-full bg-zinc-800 rounded focus-visible:ring-neutral-600 focus:ring-2 h-32 text-base outline-none py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                     ></textarea>
                 </div>
-                <Button>
-                    Submit
+                <Button type={"submit"} disabled={loading}>
+                    {loading ? 'Sending...' : 'Submit'}
                 </Button>
-            </div>
+            </form>
         </div>
     )
 }

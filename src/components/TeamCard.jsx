@@ -28,20 +28,20 @@ function TeamCard({ name, role, photoUrl, socials }) {
                         <p className="text-sm text-white/70 font-medium mt-2">{role}</p>
                     </div>
 
-                    <div className="flex flex-col items-center justify-around w-[44px] h-[120px] absolute top-[60%] left-5 rounded bg-white/20 backdrop-blur-sm">
+                    <div className="flex flex-col items-center justify-around w-[44px] h-[120px] absolute top-[60%] left-5 rounded bg-white/20 text-black/50 backdrop-blur-sm">
                         {socials.github && (
                             <a href={socials.github} target="_blank" rel="noopener noreferrer">
-                                <GithubIcon className="w-[28px] h-[28px] hover:fill-black hover:opacity-70" />
+                                <GithubIcon className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                             </a>
                         )}
                         {socials.linkedin && (
                             <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
-                                <LinkedinIcon className="w-[28px] h-[28px] hover:fill-[#00acee] hover:opacity-70" />
+                                <LinkedinIcon className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                             </a>
                         )}
                         {socials.instagram && (
                             <a href={socials.instagram} target="_blank" rel="noopener noreferrer">
-                                <InstagramIcon className="w-[28px] h-[28px] hover:fill-pink-800 hover:opacity-70" />
+                                <InstagramIcon className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                             </a>
                         )}
                     </div>
@@ -59,20 +59,20 @@ function TeamCardMobile({ name, role, photoUrl, socials }) {
             <img src={photoUrl} alt={name} className='rounded-lg' />
             <p className='font-extrabold mt-4'>{name}</p>
             <p className='font-light text-sm'>{role}</p>
-            <div className='flex mt-4 gap-4 items-center h-20 justify-center'>
+            <div className='flex mt-4 gap-4 items-center text-white/40 h-20 justify-center'>
                 {socials.github && (
                     <a href={socials.github} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
-                        <GithubIcon strokeWidth={1.2} size={14} className="w-[28px] h-[28px] hover:fill-black hover:opacity-70" />
+                        <GithubIcon strokeWidth={1.2} size={14} className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                     </a>
                 )}
                 {socials.linkedin && (
                     <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
-                        <LinkedinIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:fill-[#00acee] hover:opacity-70" />
+                        <LinkedinIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                     </a>
                 )}
                 {socials.instagram && (
                     <a href={socials.instagram} target="_blank" rel="noopener noreferrer" className='bg-white/20 p-1 rounded-lg'>
-                        <InstagramIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:fill-pink-800 hover:opacity-70" />
+                        <InstagramIcon strokeWidth={1.2} className="w-[28px] h-[28px] hover:text-white hover:opacity-70" />
                     </a>
                 )}
             </div>

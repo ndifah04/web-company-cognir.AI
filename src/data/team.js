@@ -23,7 +23,7 @@ export const teamMembers = [
     {
         name: 'Ahmad Faisal',
         role: 'Chief Marketing Officer',
-        photoUrl: 'https://ik.imagekit.io/nurman/faisal.jpg?updatedAt=1745962408499',
+        photoUrl: 'https://ik.imagekit.io/nurman/faisal2.jpg?updatedAt=1746481768063',
         socials: {
             github: 'https://github.com/Ahmadfaisal04',
             linkedin: 'hhttps://www.linkedin.com/in/ahmad-faisal04',
