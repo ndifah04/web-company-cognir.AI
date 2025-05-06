@@ -135,7 +135,7 @@ export function Header() {
 
   return (
     // <header className="py-4 border-b border-white/15 md:border-none sticky top-0 z-50 bg-gray-900/80 backdrop-blur">
-    <header className='z-50 mt-4 mx-4 sticky'>
+    <header className='z-50 mt-4 sticky'>
       <div className="mx-auto">
         <div className="flex justify-between items-center border border-white/15 p-2.5 rounded-xl max-w-6xl mx-auto">
           <div className="flex items-center">
